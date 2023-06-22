@@ -22,7 +22,12 @@ body {
     font-size: 32px;
     font-weight: 400;
     margin-bottom: 10px;
-    cursor: help;
+}
+.main-desc {
+    margin-bottom: 15px;
+}
+.desc {
+    margin-bottom: 10px;
 }
 .list {
 
