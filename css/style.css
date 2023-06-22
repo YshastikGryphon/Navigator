@@ -1,0 +1,55 @@
+h1, h2, a, p {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: ghostwhite;
+}
+.container {
+    max-width: 1200px;
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin: 4vh auto;
+    background-color: white;
+}
+.title {
+    font-size: 64px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.title2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    cursor: help;
+}
+.list {
+
+}
+.item {
+    margin-bottom: 8px;
+}
+.link {
+    display: inline-block;
+    font-size: 24px;
+    text-decoration: none;
+    color: blue;
+    border-bottom: 2px solid white;
+    transition: color .3s, border .3s;
+}
+.link:hover {
+    color: lightskyblue;
+    border-color: lightskyblue;
+}
+.link:active {
+    color: purple;
+    border-color: purple;
+}
+.link:focus-visible {
+    outline: none;
+    color: lightskyblue;
+    border-color: lightskyblue;
+}
+
+
