@@ -1,0 +1,29 @@
+@media (max-width: 680px) {
+    .container {
+        max-width: 1200px;
+        padding: 20px 10px;
+    }
+    .title {
+        font-size: 42px;
+        margin-bottom: 10px;
+    }
+    .title2 {
+        font-size: 28px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+    .list {
+        list-style: none;
+        padding: 0;
+    }
+    .item {
+        padding: 5px 0;
+    }
+    .item:not(:last-child) {
+        margin-bottom: 8px;
+        border-bottom: 1px solid lightgray;
+    }
+    .link {
+        font-size: 18px;
+    } 
+}
