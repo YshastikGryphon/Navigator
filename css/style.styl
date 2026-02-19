@@ -1,0 +1,442 @@
+// colors
+:root
+  // dark theme
+  --clr-bg #2D3035
+  --clr-bg-light #393E46
+  --clr-bg-lighter #505661
+  --grad-aside-btn linear-gradient(0deg, #393e46 0, #505661 100%)
+  --clr-accent #FFD369
+  --clr-accent-hover #FFE7AD
+  --clr-txt #EEEEEE
+  --clr-txt-darker #7E8998
+  --clr-help-bg rgba(0, 0, 0, 0.8)
+  --clr-help-txt #ffffff
+
+// font
+:root
+  --font-family 'Arial', 'Helvetica', 'sans-serif'
+  --font-h1 600 52px/54px var(--font-family)
+  --margin-h1 40px
+  --font-h2 500 32px/36px var(--font-family)
+  --margin-h2 28px
+  --font-h3 500 24px/28px var(--font-family)
+  --margin-h3 20px
+  --font-base 400 18px/24px var(--font-family)
+  --margin-base 20px
+  --font-small 400 14px/18px var(--font-family)
+  --margin-small 12px
+  --font-tiny 300 12px/14px var(--font-family)
+  --margin-tiny 8px
+  @media (max-width: 1200px)
+    --font-h1 600 44px/48px var(--font-family)
+    --margin-h1 32px
+    --font-h2 500 28px/32px var(--font-family)
+    --margin-h2 24px
+    --font-h3 500 22px/26px var(--font-family)
+    --font-base 400 16px/20px var(--font-family)
+  @media (max-width: 600px)
+    --font-h1 600 28px/32px var(--font-family)
+    --margin-h1 28px
+    --font-h2 500 24px/28px var(--font-family)
+    --margin-h2 20px
+    --font-h3 500 20px/24px var(--font-family)
+    --margin-h3 12px
+    --font-base 400 14px/18px var(--font-family)
+    --margin-base 12px
+    --font-small 400 12px/16px var(--font-family)
+    --margin-small 8px
+    --font-tiny 300 10px/12px var(--font-family)
+    --margin-tiny 6px
+
+
+// margins, paddings, transition
+:root
+  --margin-section 80px
+  --section-padding 40px 32px
+  --section-radius 24px
+  --item-padding 16px 20px 
+  --item-radius 12px
+  --trans-fast .25s ease
+  --trans-theme .15s ease-in
+  @media (max-width: 1200px)
+    --margin-section 72px
+    --section-padding 36px 28px
+    --item-padding 12px 16px 
+    --item-radius 10px
+  @media (max-width: 600px)
+    --margin-section 40px
+    --section-padding 20px 12px
+    --section-radius 18px
+    --item-padding 12px 12px 
+    --item-radius 8px
+
+*, *::after, *::before
+  box-sizing border-box
+
+*, *::after, *::before
+  transition background var(--trans-theme), color var(--trans-theme)
+
+html
+  scroll-behavior smooth
+  scrollbar-width thin
+  scrollbar-color var(--clr-txt-darker) var(--clr-bg)
+  transition var(--trans-theme)
+
+h1, h2, h3, h4, p
+  margin 0
+
+a
+  color inherit
+
+ul
+  list-style-type none
+  padding 0
+  margin 0
+
+.container
+  margin 0 auto
+  padding 0 48px 
+  max-width 1280px
+  @media (max-width: 1200px)
+    padding 0 32px 
+  @media (max-width: 900px)
+    padding 0 24px 
+  @media (max-width: 400px)
+    padding 0 16px 
+
+.main
+  padding 80px 0 120px
+  background var(--clr-bg)
+  color var(--clr-txt)
+  font var(--font-base)
+  @media (max-width: 1200px)
+    padding 60px 0 80px
+  @media (max-width: 600px)
+    padding 32px 0 60px
+  &__title
+    position relative
+    font var(--font-h1)
+    &:not(:last-child)
+      margin-bottom var(--margin-base) 
+  &__desc
+    font var(--font-base)
+    &:not(:last-child)
+      margin-bottom var(--margin-h1) 
+  &__settings
+    display flex
+    flex-wrap wrap
+    gap 4px 24px
+    margin-bottom  var(--margin-base)
+    &-item
+      color var(--clr-accent)
+      text-decoration none
+      transition var(--trans-fast)
+      &:hover
+        color var(--clr-accent-hover)
+
+.content
+  &-wrapper
+    display grid
+    grid-template-columns 1fr 240px
+    gap 32px 
+    @media (max-width: 1200px)
+      grid-template-columns 1fr 200px
+      gap 20px 
+    @media (max-width: 900px)
+      display flex
+      flex-direction column
+  &-aside
+    &-mobile
+      position absolute
+      top 72px
+      left -72px
+      display none
+      color var(--clr-txt)
+      background var(--grad-aside-btn)
+      transform rotate(-90deg)
+      outline 0
+      border 0
+      border-radius 12px 12px 0 0
+      padding 12px 20px
+      box-shadow 0 0 16px rgba(0,0,0,0.5)
+      @media (max-width: 900px)
+        display block
+    &-sticky
+      position sticky
+      top 40px
+      background var(--clr-bg-light)
+      padding var(--section-padding)
+      border-radius var(--section-radius)
+      box-shadow 0 0 32px rgba(0, 0, 0, 0.24)
+      transition var(--trans-fast) 
+      @media (max-width: 900px)
+        position fixed
+        padding 40px 20px 40px 32px
+        top 40px
+        right 0
+        transform translateX(100%)
+        box-shadow none
+        border-radius 20px 0 0 20px
+        filter none
+      &.--show
+        transform translateX(0)
+        @media (max-width: 900px)
+          filter drop-shadow(0 0 16px rgba(0,0,0,0.5))
+        & .content-aside-mobile
+          box-shadow 0 0 16px rgba(0,0,0,0)
+    &__title
+      position relative
+      color var(--clr-txt-darker)
+      font var(--font-small)
+      margin-bottom var(--margin-base) 
+      @media (max-width: 900px)
+        display none
+    &__nav
+      display flex
+      flex-direction column
+      gap 8px
+      &-link
+        font var(--font-small)
+        text-decoration none
+        transition var(--trans-fast)
+        &[href]
+          color var(--clr-accent)
+          &:hover
+            color var(--clr-accent-hover)
+
+.section
+  background var(--clr-bg-light)
+  padding var(--section-padding)
+  border-radius var(--section-radius)
+  box-shadow 0 0 32px rgba(0, 0, 0, 0.24)
+  @media (max-width: 900px)
+    box-shadow 0 0 18px rgba(0, 0, 0, 0.18)
+  &:not(:last-child)
+    margin-bottom var(--margin-section) 
+  &__title
+    position relative
+    font var(--font-h2)
+    &:not(:last-child)
+      margin-bottom var(--margin-base) 
+  &__desc
+    font var(--font-base)
+    &:not(:last-child)
+      margin-bottom var(--margin-base) 
+    & a
+      position relative
+      display inline-block
+      text-decoration none
+      transition var(--trans-fast)
+      &[href]
+        &::after
+          content ''
+          position absolute
+          bottom 2px
+          left 0
+          right 0
+          color inherit
+          border-bottom 1px dashed currentColor
+        &:hover
+          color var(--clr-accent-hover)
+  &__subgroup
+    color var(--txt-darker)
+    font var(--font-h3)
+    &:not(:first-child)
+      margin-top var(--margin-h1) 
+    &:not(:last-child)
+      margin-bottom var(--margin-small) 
+  &__list
+    display flex
+    flex-direction column
+    gap var(--margin-small)
+    &:not(:first-child)
+      margin-top var(--margin-base) 
+    &:not(:last-child)
+      margin-bottom var(--margin-h2) 
+    &-item
+      padding var(--item-padding)
+      display flex
+      flex-direction column
+      background var(--clr-bg-lighter)
+      border-radius var(--item-radius)
+      &-link
+        font var(--font-h3)
+        transition var(--trans-fast)
+        text-decoration none
+        &:not(:last-child)
+          margin-bottom var(--margin-base) 
+        &[href]
+          color var(--clr-accent)
+          &:hover
+            color var(--clr-accent-hover)
+      &-tags
+        position relative
+        display flex
+        flex-wrap wrap
+        gap 4px 0
+        &:not(:last-child)
+          margin-bottom var(--margin-small) 
+        & span
+          position relative
+          font var(--font-small)
+          cursor help
+          transition var(--trans-fast)
+          &:hover
+            text-shadow 0 0 8px currentColor
+          &:not(:last-child)
+            display inline-block
+            padding-right 8px
+            margin-right 8px
+            border-right 1px solid var(--clr-txt-darker)
+            @media (max-width: 600px)
+              padding-right 4px
+              margin-right 4px
+      &-desc
+        font var(--font-base)
+        & a
+          position relative
+          display inline-block
+          text-decoration none
+          transition var(--trans-fast)
+          &[href]
+            &::after
+              content ''
+              position absolute
+              bottom 2px
+              left 0
+              right 0
+              color inherit
+              border-bottom 1px dashed currentColor
+            &:hover
+              color var(--clr-accent-hover)
+
+// tags
+.tag
+  &-layout
+    color #ffac5f
+  &-responsive
+    color #fecc86
+  &-php
+    color #dc98ff 
+  &-server
+    color #f36fc5
+  &-js
+    color #b7f27c
+  &-greensock
+    color #80ff00
+  &-api
+    color #7cb9f2
+  &-bootstrap
+    color #c5a7f5
+  &-ymap
+    color #f2d67c
+  &-jslib
+    color #dbfa53
+  &-localstorage
+    color #c4c4c4
+
+// span help
+span[description]
+  position relative
+  cursor help
+  @media (max-width: 900px)
+    position static
+  &::after
+    content attr(description)
+    position absolute
+    top 110%
+    left 0
+    width max-content
+    max-width 360px
+    padding 6px 8px 
+    background var(--clr-help-bg)
+    color var(--clr-help-txt)
+    font var(--font-small)
+    border-radius 4px
+    visibility hidden
+    opacity 0
+    transform translateY(20px)
+    pointer-events none
+    transition var(--trans-fast)
+    z-index 2
+    @media (max-width: 900px)
+      max-width 90vw
+      max-width calc(100dvw - 80px)
+  &:hover
+    &::after
+      visibility visible
+      opacity 1
+      transform translateY(0)
+
+// language
+html
+  & .ru
+    display inline
+  & .en
+    display none
+html.--en
+  & .ru
+    display none
+  & .en
+    display inline
+
+
+// theme
+html
+  & .main__settings-item-lighttheme
+    display inline
+  & .main__settings-item-darktheme
+    display none
+
+html.--darktheme
+  & .main__settings-item-darktheme
+    display none
+  & .main__settings-item-lighttheme
+    display inline
+
+html.--lighttheme
+  // light theme
+  --clr-bg #ffffff
+  --clr-bg-light #ffffff
+  --clr-bg-lighter #f4f4f4
+  --grad-aside-btn linear-gradient(0deg, #ffffff 0, #f4f4f4 100%)
+  --clr-accent #0072a7
+  --clr-accent-hover #009ce4
+  --clr-txt #1b1b1b
+  --clr-txt-darker #10375C
+  --clr-help-bg rgba(0, 0, 0, 0.8)
+  --clr-help-txt #ffffff
+  & .main__settings-item-lighttheme
+    display none
+  & .main__settings-item-darktheme
+    display inline
+  .tag
+    &-layout
+      color #f87800
+    &-responsive
+      color #f08b2c
+    &-php
+      color rgb(96, 0, 145)
+    &-server
+      color #bd007b
+    &-js
+      color #4c9700
+    &-greensock
+      color #58af00
+    &-api
+      color #0065c4
+    &-bootstrap
+      color #694d97
+    &-ymap
+      color #ffae00
+    &-jslib
+      color #4b6600
+    &-localstorage
+      color #2e2e2e
+  & .content-aside-mobile
+    box-shadow 0 0 16px rgba(0,0,0,0.15)
+  & .content-aside-sticky.--show
+    @media (max-width: 900px)
+      filter drop-shadow(0 0 16px rgba(0,0,0,0.15))
+    & .content-aside-mobile
+      box-shadow 0
