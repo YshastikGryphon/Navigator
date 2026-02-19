@@ -1,177 +1,549 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Список проектов</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media.css">
-    <link type="image/png" sizes="128x128" rel="icon" href="favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список проектов</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link type="image/png" sizes="128x128" rel="icon" href="favicon.png">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <main>
-        <div class="container">
-            <h1 class="title">Список проектов</h1>
-            <p class="main-desc">На данной странице представлены проекты над которыми я работал. Проекты загружены на хостинги AlwaysData и GitHub Pages.</p>
-            <h2 class="title2">Создание электронного ресурса</h2>
-            <ul class="list">
-                <li class="item">
-                    <strike>
-                    <a class="link">
-                        Электронный учебник с тестами «MegaMath»
-                    </a>
-                    <div class="tags">
-                        Верстка / Адаптив / Работа с сервером / PHP
-                    </div>
-                    <p class="text">
-                        Курсовая работа. Сайт, загруженный на хостинг.
-                    </p>
-                    </strike>
-                </li>
+  <main class="main" id="toppage">
+    <div class="container">
+      <div class="main__settings">
+        <a class="main__settings-item" href="#swithLanguage">
+          <span class="ru">Switch to English</span>
+          <span class="en">Переключиться на русский язык</span>
+        </a>
+        <a class="main__settings-item" href="#switchTheme">
+          <span class="main__settings-item-lighttheme">
+            <span class="ru">Переключиться на светлую тему</span>
+            <span class="en">Switch to light theme</span>
+          </span>
+          <span class="main__settings-item-darktheme">
+            <span class="ru">Переключиться на темную тему</span>
+            <span class="en">Switch to dark theme</span>
+          </span>
+        </a>
+      </div>
+      <h1 class="main__title">
+        <span class="ru">Список проектов</span>
+        <span class="en">Projects list</span>
+      </h1>
+      <p class="main__desc">
+        <span class="ru">Навигация по проектам с описанием.</span>
+        <span class="en">Project navigation with better descriptions</span>
+      </p>
+      <div class="content-wrapper">
+        <div class="content">
+          <!-- SkillBox -->
+          <section class="section" id="skillbox">
+            <h2 class="section__title">
+              SkillBox
+            </h2>
+            <p class="section__desc">
+              <span class="ru">Список проектов, созданых во время курсов <a href="https://skillbox.ru">SkillBox</a></span>
+              <span class="en">Projects, made during <a href="https://skillbox.ru">SkillBox</a> online courses</span>
+            </p>
+
+            <h3 class="section__subgroup">
+              <span class="ru">Верстка веб-страниц</span>
+              <span class="en">Web-layout development</span>
+            </h3>
+            <!-- SkillBox: Верстка -->
+            <ul class="section__list">
+              <!-- «Blanchard» -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/skillbox_Project/">
+                  <span class="ru">
+                    «Blanchard»
+                  </span>
+                  <span class="en">
+                    «Blanchard»
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-layout"></span>
+                  <span class="tag-responsive"></span>
+                  <span class="tag-js"></span>
+                  <span class="tag-jslib"></span>
+                  <span class="tag-ymap"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Полная разработка веб-страницы по макету. Подключение библиотек, Яндекс карты и программирование JavaScript. Финальный курсовой проект.
+                  </span>
+                  <span class="en">
+                    Full Web-page development: layout, JavaScript programming, JavaScript libraries, Yandex map linking. Final course project.
+                  </span>
+                </p>
+              </li>
+              <!-- «Евклид» -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/skillbox_Evklid/">
+                  <span class="ru">
+                    «Евклид»
+                  </span>
+                  <span class="en">
+                    «Euclid»
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-layout"></span>
+                  <span class="tag-responsive"></span>
+                  <span class="tag-js"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Разработка страницы сайта по макету с дополнением JavaScript.
+                  </span>
+                  <span class="en">
+                    Web-page development. Visual JavaScript.
+                  </span>
+                </p>
+              </li>
+              <!-- «Лагуна» -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/skillbox_Lagoona/">
+                  <span class="ru">
+                    «Лагуна»
+                  </span>
+                  <span class="en">
+                    «Lagoona»
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-layout"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Разработка страницы сайта по макету. 
+                  </span>
+                  <span class="en">
+                    Web-page development.
+                  </span>
+                </p>
+              </li>
             </ul>
-            <h2 class="title2">Верстка сайтов</h2>
-            <p class="desc">Проекты связанные с FrontEnd разработкой сайтов</p>
-            <ul class="list">
-                <li class="item">
-                    <a class="link" href="https://yshastikgryphon.github.io/skillbox_Project/" target="_blank"> 
-                        Верстка сайта «Blanchard»
-                    </a>
-                    <div class="tags">
-                        Верстка / Адаптив / Подключение модулей / JavaScript
-                    </div>
-                    <p class="text">
-                        Задание SkillBox. Создание сайта по макету.
-                    </p>
-                </li>
-                <li class="item">
-                    <a class="link" href="https://yshastikgryphon.github.io/interlabs-task/" target="_blank"> 
-                        Верстка сайта «Herbs»
-                    </a>
-                    <div class="tags">
-                        Верстка / Адаптив / JavaScript
-                    </div>
-                    <p class="text">
-                        Создание сайта по макету. Тестовое задание для Interlabs.
-                    </p>
-                </li>
-                <li class="item">
-                    <a class="link" href="https://yshastikgryphon.github.io/skillbox_Evklid/" target="_blank">
-                        Верстка сайта «Евклид»
-                    </a>
-                    <div class="tags">
-                        Верстка / Оптимизация / Адаптив / Подключение модулей / JavaScript
-                    </div>
-                    <p class="text">
-                        Задание SkillBox. Создание сайта по макету.
-                    </p>
-                </li>
-                <li class="item">
-                    <a class="link" href="https://yshastikgryphon.github.io/skillbox_Lagoona/" target="_blank">
-                        Верстка сайта «Лагуна»
-                    </a>
-                    <div class="tags">
-                        Верстка / Адаптив
-                    </div>
-                    <p class="text">
-                        Задание SkillBox. Создание сайта по макету.
-                    </p>
-                </li>
-                <li class="item">
-                    <a class="link" href="https://yshastikgryphon.github.io/Verstka_Aqua/" target="_blank">
-                        Верстка сайта «RitmStyle»
-                    </a>
-                    <div class="tags">
-                        Верстка / JavaScript
-                    </div>
-                    <p class="text">
-                        Создание сайта по макету.
-                    </p>
-                </li>
-                <li class="item">
-                    <a class="link" href="https://yshastikgryphon.github.io/DKIT_Ugmonk/ " target="_blank">
-                        Верстка сайта «Ugmonk»
-                    </a>
-                    <div class="tags">
-                        Верстка
-                    </div>
-                    <p class="text">
-                        Создание сайта по макету.
-                    </p>
-                </li>
-                <li class="item">
-                    <a class="link" href="https://yshastikgryphon.github.io/DKIT_houssell/ " target="_blank">
-                        Верстка сайта «Housell»
-                    </a>
-                    <div class="tags">
-                        Верстка
-                    </div>
-                    <p class="text">
-                        Создание сайта по макету.
-                    </p>
-                </li>
+
+            <h3 class="section__subgroup">
+              <span class="ru">JavaScript</span>
+              <span class="en">JavaScript</span>
+            </h3>
+            <!-- SkillBox: JavaScript -->
+            <ul class="section__list">
+              <!-- API -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/Skillbox_JS-API/">
+                  <span class="ru">
+                    Изучение API
+                  </span>
+                  <span class="en">
+                    Learning API
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-js"></span>
+                  <span class="tag-api"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Изучение функционала fetch(). Запрос данных из публичного ресурса <a href="https://swapi.dev/">SWAPI</a>
+                  </span>
+                  <span class="en">
+                    Getting and displaying data from public <a href="https://swapi.dev/">SWAPI</a>
+                  </span>
+                </p>
+              </li>
+              <!-- Студенты -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/skillbox_Students-table/">
+                  <span class="ru">
+                    Работа с данными. Таблица «Студенты»
+                  </span>
+                  <span class="en">
+                    Working with data. «Students» table
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-bootstrap"></span>
+                  <span class="tag-js"></span>
+                  <span class="tag-localstorage"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Создание локальной базы данных. Получение массива данных. Создание фильтров для данных.
+                  </span>
+                  <span class="en">
+                    Saving data locally. Getting data from localstorage. Creating custom filters for data.
+                  </span>
+                </p>
+              </li>
+              <!-- Игра в пары -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/skillbox_Game-Web-Pairs/">
+                  <span class="ru">
+                    Веб-приложение «Найди пары»
+                  </span>
+                  <span class="en">
+                    Web-app «Find pairs»
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-layout"></span>
+                  <span class="tag-js"></span>
+                </div>
+              </li>
+              <!-- Игра в пары 2 -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/skillbox_Game-Web-Pairs-v2/">
+                  <span class="ru">
+                    Переработка «Найди пары» на классы JS
+                  </span>
+                  <span class="en">
+                    Rewriting «Find pairs» JS functions into JS class
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-layout"></span>
+                  <span class="tag-js"></span>
+                </div>
+              </li>
+              <!-- Задачи -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/skillbox_ToDoList-app/">
+                  <span class="ru">
+                    Создание веб-приложения «Список задач»
+                  </span>
+                  <span class="en">
+                    Web-application «To-Do List»
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-bootstrap"></span>
+                  <span class="tag-js"></span>
+                  <span class="tag-localstorage"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Сохранение данных локально в браузере. Извлечение данных из локального хранилища.
+                  </span>
+                  <span class="en">
+                    Learning how to save and get data from browser's LocalStorage
+                  </span>
+                </p>
+              </li>
+              <!-- GreenSock -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/skillbox_GSAP-animations/">
+                  <span class="ru">
+                    Изучение GreenSock
+                  </span>
+                  <span class="en">
+                    GreenSock basics
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-greensock"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Изучение возможностей библиотеки GreenSock.
+                  </span>
+                  <span class="en">
+                    Learning GreenSock library.
+                  </span>
+                </p>
+              </li>
             </ul>
-            <h2 class="title2">Работа с JavaScript</h2>
-            <p class="desc">Проекты на JavaScript</p>
-            <ul class="list">
-                <li class="item">
-                    <a class="link" href="https://yshastikgryphon.github.io/Skillbox_JS-API/" target="_blank">
-                        Работа с API
-                    </a>
-                    <div class="tags">
-                        JavaScript / API
-                    </div>
-                    <p class="text">
-                        SkillBox. Создание приложения работающего при помощи <a href="https://swapi.dev/">SWAPI</a>
-                    </p>
-                </li>
-                <li class="item">
-                    <a class="link" href="https://yshastikgryphon.github.io/skillbox_GSAP-animations/ " target="_blank">
-                        Работа с анимациями библиотеки GreenSock
-                    </a>
-                    <div class="tags">
-                        JavaScript / Animations
-                    </div>
-                    <p class="text">
-                        SkillBox. Работа с библиотекой для создания анимаций GreenSock
-                    </p>
-                </li>
-                <li class="item">
-                    <a class="link" href="https://yshastikgryphon.github.io/skillbox_Game-Web-Pairs/ " target="_blank">
-                        Создание веб-приложения "Игра в пары"
-                    </a>
-                    <div class="tags">
-                        JavaScript
-                    </div>
-                    <p class="text">
-                        Создание игры в пары.
-                    </p>
-                </li>
-                <li class="item">
-                    <a class="link" href="https://yshastikgryphon.github.io/skillbox_Game-Web-Pairs-v2/ " target="_blank">
-                        Веб-приложение "Игра в пары" v2
-                    </a>
-                    <div class="tags">
-                        JavaScript /
-                    </div>
-                    <p class="text">
-                        Перевод веб-игры на систему классов JS
-                    </p>
-                </li>
-                <li class="item">
-                    <a class="link" href="https://yshastikgryphon.github.io/skillbox_ToDoList-app/ " target="_blank">
-                        SkillBox. Создание веб-приложения "Список задач"
-                    </a>
-                    <div class="tags">
-                        JavaScript / LocalStorage
-                    </div>
-                    <p class="text">
-                        SkillBox. Создание приложения для сохранения задач
-                    </p>
-                </li>
+          </section>
+
+          <!-- ДКИТ -->
+          <section class="section" id="college">
+            <h2 class="section__title">
+              <span class="ru">Проекты <span description="«Донской Колледж Информационных технологий» на Бобрик-Горе">колледжа</span></span>
+              <span class="en">College</span>
+            </h2>
+            <p class="section__desc">
+              <span class="ru">Список проектов, что я выполнял в колледже</span>
+              <span class="en"></span>
+            </p>
+            <ul class="section__list">
+              <!-- MegaMath -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="javascript:void();">
+                  <span class="ru">
+                    <strike>Электронный учебник с тестами «MegaMath»</strike> (Устарел)
+                  </span>
+                  <span class="en">
+                    <strike>Web Schoolbook with tests «MegaMath»</strike> (Outdated)
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-layout"></span>
+                  <span class="tag-responsive"></span>
+                  <span class="tag-server"></span>
+                  <span class="tag-php"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Курсовая работа. Сайт, загруженный на хостинг <a href="https://www.alwaysdata.com">«AlwaysData»</a>.
+                  </span>
+                  <span class="en">
+                    Final Project. Web-site hosted on <a href="https://www.alwaysdata.com">«AlwaysData»</a> server.
+                  </span>
+                </p>
+              </li>
+              <!-- FaberHouse -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/DKIT_FaberHouse/">
+                  <span class="ru">
+                    «FaberHouse»
+                  </span>
+                  <span class="en">
+                    «FaberHouse»
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-layout"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Создание веб-сайта по макету.
+                  </span>
+                  <span class="en">
+                    Website development.
+                  </span>
+                </p>
+              </li>
+              <!-- «Housell» -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/DKIT_houssell/">
+                  <span class="ru">
+                    Верстка сайта «Housell»
+                  </span>
+                  <span class="en">
+                    ENG
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-layout"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Создание веб-сайта по макету.
+                  </span>
+                  <span class="en">
+                    Website development.
+                  </span>
+                </p>
+              </li>
+              <!-- UgMonk -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/DKIT_Ugmonk/">
+                  <span class="ru">
+                    «Ugmonk»
+                  </span>
+                  <span class="en">
+                    «Ugmonk»
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-layout"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Создание веб-сайта по макету.
+                  </span>
+                  <span class="en">
+                    Website development.
+                  </span>
+                </p>
+              </li>
             </ul>
+          </section>
+
+          <!-- Other -->
+          <section class="section" id="other">
+            <h2 class="section__title">
+              <span class="ru">Другие проекты</span>
+              <span class="en">Other Projects</span>
+            </h2>
+            <ul class="section__list">
+              <!-- Herbs -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/interlabs-task/">
+                  <span class="ru">
+                    «Herbs»
+                  </span>
+                  <span class="en">
+                    «Herbs»
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-layout"></span>
+                  <span class="tag-responsive"></span>
+                  <span class="tag-js"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Создание сайта по макету. Задание Interlabs.
+                  </span>
+                  <span class="en">
+                    Web-page development. Interlabs task.
+                  </span>
+                </p>
+              </li>
+              <!-- RitmStyle -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/Verstka_Aqua/">
+                  <span class="ru">
+                    «RitmStyle»
+                  </span>
+                  <span class="en">
+                    «RitmStyle»
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-layout"></span>
+                  <span class="tag-ymap"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Создание страницы сайта по макету
+                  </span>
+                  <span class="en">
+                    Web-page development.
+                  </span>
+                </p>
+              </li>
+              <!-- item 
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="javascript:void();">
+                  <span class="ru">
+                    RU
+                  </span>
+                  <span class="en">
+                    ENG
+                  </span>
+                </a>
+                <div class="section__list-item-tags">
+                  <span class="tag-layout"></span>
+                </div>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    RU
+                  </span>
+                  <span class="en">
+                    ENG
+                  </span>
+                </p>
+              </li>
+              -->
+            </ul>
+          </section>
+
+          <!-- Templates -->
+          <section class="section" id="templates">
+            <h2 class="section__title">
+              <span class="ru">Шаблоны</span>
+              <span class="en">Templates</span>
+            </h2>
+            <p class="section__desc">
+              <span class="ru">Просто шаблоны для дальнейшего использования на проектах</span>
+              <span class="en">Basic templates for usage in different projects</span>
+            </p>
+            <ul class="section__list">
+              <!-- Sticky -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/templates_header-sticky-enhanced/">
+                  <span class="ru">
+                    Sticky Header
+                  </span>
+                  <span class="en">
+                    Sticky Header
+                  </span>
+                </a>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Более интерактивный position:sticky
+                  </span>
+                  <span class="en">
+                    Script to make position:sticky more interactive
+                  </span>
+                </p>
+              </li>
+              <!-- Accordeon -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/templates_accordeon-events/">
+                  <span class="ru">
+                    Аккордеон
+                  </span>
+                  <span class="en">
+                    Accordeon
+                  </span>
+                </a>
+                <p class="section__list-item-desc">
+                  <span class="ru">
+                    Мой скрипт для создания выпадающих списков
+                  </span>
+                  <span class="en">
+                    My script for making dropdown lists
+                  </span>
+                </p>
+              </li>
+              <!-- cookie -->
+              <li class="section__list-item">
+                <a class="section__list-item-link" target="_blank" href="/templates_cookie-banner/">
+                  <span class="ru">
+                    Простеший баннер Куки
+                  </span>
+                  <span class="en">
+                    Most basic cookie banner
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </section>
         </div>
-    </main>
+        <aside class="content-aside">
+          <div class="content-aside-sticky">
+            <button class="content-aside-mobile">
+              <span class="ru">Навигация</span>
+              <span class="en">Navigation</span>
+            </button>
+            <div class="content-aside__title">
+              <span class="ru">Навигация</span>
+              <span class="en">Navigation</span>
+            </div>
+            <nav class="content-aside__nav">
+              <a class="content-aside__nav-link" href="#toppage">
+                <span class="ru">Список проектов</span>
+                <span class="en">Project List</span>
+              </a>
+              <a class="content-aside__nav-link" href="#skillbox">
+                - SkillBox
+              </a>
+              <a class="content-aside__nav-link" href="#college">
+                <span class="ru">- Колледж</span>
+                <span class="en">- College</span>
+              </a>
+              <a class="content-aside__nav-link" href="#other">
+                <span class="ru">- Другое</span>
+                <span class="en">- Other</span>
+              </a>
+              <a class="content-aside__nav-link" href="#templates">
+                <span class="ru">- Шаблоны</span>
+                <span class="en">- Templates</span>
+              </a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
 
